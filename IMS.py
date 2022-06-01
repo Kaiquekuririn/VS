@@ -18,7 +18,7 @@ def calcular():
 
     else:
         lb3['text'] = 'Erro!!!'
-
+ 
 
 
 #front-end
