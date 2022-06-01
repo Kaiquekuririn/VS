@@ -3,10 +3,23 @@ from tkinter import *
 #back-end
 def calcular():
     if in1.get().replace('.','',1) and in2.get().replace('.','',1):
-        x=float(in1.get())/(float(in2.get())**2)
+        x=round(float(in1.get())/(float(in2.get())**2),2)
         lb3['text'] = x
+        if x < 18.5:
+            lb4['text'] = 'Abaixo do Peso'            
+        elif x >= 18.5 and x <= 24.9:
+            lb4['text'] = 'Normal'  
+        elif x >= 25.0 and x <= 29.9:
+            lb4['text'] = 'Sobrepeso'  
+        elif x >= 30.0 and x <= 39.9:
+            lb4['text'] = 'Obesidade'  
+        elif x > 40:
+            lb4['text'] = 'Obesidade Grave' 
+
     else:
         lb3['text'] = 'Erro!!!'
+
+
 
 #front-end
 root = Tk()
