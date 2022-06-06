@@ -35,7 +35,7 @@ root.geometry('320x500')
    
 #criando widgets nuerais
 lb1 = Label (root, text='', font= 'Arial 25')
-bt1= Button (root, text = '1', font='Arial 20', command=lambda: entrada ('1'))
+bt1= Button (root, text = '1', font='Arial 20', command=lambda: entrada ('1')) 
 bt2= Button (root, text= '2', font = 'Arial 20',command=lambda: entrada ('2'))
 bt3= Button (root, text='3', font= 'Arial 20', command=lambda: entrada ('3'))
 bt4 = Button (root, text='4', font= 'Arial 25', command=lambda: entrada('4'))
@@ -48,7 +48,7 @@ bt9 = Button (root, text='9', font= 'Arial 25', command=lambda: entrada('9'))
 #criando widgets de sinais
 bt10 = Button (root, text='.', font= 'Arial 25', command=lambda: entrada('.'))
 bt11 = Button (root, text='=', font= 'Arial 25', command=lambda: resultado())
-bt12 = Button (root, text='+', font= 'Arial 25', command=lambda: entrada('+'))
+bt12 = Button (root, text='+', font= 'Arial 25', command=lambda: entrada('+aa '))
 bt13 = Button (root, text='-', font= 'Arial 25', command=lambda: entrada('-'))
 bt14 = Button (root, text='x', font= 'Arial 25', command=lambda: entrada('*'))
 bt15 = Button (root, text='/', font= 'Arial 25', command=lambda: entrada('/'))
@@ -83,4 +83,33 @@ bt18.grid(row=3, column=0, sticky=NSEW)
 bt19.grid(row=2, column=2, columnspan=2, sticky=NSEW)
 bt20.grid(row=2, column=0, columnspan=2, sticky=NSEW)
 
-root.mainloop()
+#interação teclado numeros
+root.bind('0', lambda event: entrada('0'))
+root.bind('1', lambda event: entrada('1'))
+root.bind('2', lambda event: entrada('2'))
+root.bind('3', lambda event: entrada('3'))
+root.bind('4', lambda event: entrada('4'))
+root.bind('5', lambda event: entrada('5'))
+root.bind('6', lambda event: entrada('6'))
+root.bind('7', lambda event: entrada('7'))
+root.bind('8', lambda event: entrada('8'))
+root.bind('9', lambda event: entrada('9'))
+
+#interação teclado sinais
+root.bind('.', lambda event: entrada('.'))
+root.bind('=', lambda event: resultado())
+root.bind('+', lambda event: entrada('+'))
+root.bind('-', lambda event: entrada('-'))
+root.bind('*', lambda event: entrada('*'))
+root.bind('/', lambda event: entrada('/'))
+#root.bind('16', lambda event: entrada())
+root.bind('^^', lambda event: entrada('**'))
+root.bind('%', lambda event: entrada('/100'))
+#root.bind('', lambda event: limpar())
+root.bind('c', lambda event: limpar())
+
+
+
+ 
+
+root.mainloop() 
