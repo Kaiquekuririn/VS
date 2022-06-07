@@ -1,16 +1,13 @@
-from logging import root
-from msilib.schema import Font
+
 from tkinter import *
-from tkinter.tix import COLUMN
-from tokenize import cookie_re
-from turtle import color, title
+
 
 root = Tk()
 root.title = ('Cadastro')
-fr1 = Frame (root)
-fr2 = Frame (root)
-fr3 = Frame (root)
-
+fr1 = LabelFrame (bg='red', text='Dados Pessoais', font= 'Arial 25')
+fr2 = LabelFrame (bg='red', text='Dados Pessoais', font= 'Arial 25')
+fr3 = LabelFrame (bg='red', text='Dados Pessoais', font= 'Arial 25')
+root.configure (bg= 'red')
 #label 1 frame
 lb0_fr1 = Label(fr1, text = '  Dados Pessoais', font= 'Arial 25')
 lb1_fr1 = Label(fr1, text = ' Nome:', font= 'Arial 25')
@@ -18,10 +15,10 @@ lb2_fr1 = Label(fr1, text = ' Data Nasc:', font= 'Arial 25')
 lb3_fr1 = Label(fr1, text = ' CPF:', font= 'Arial 25')
 lb4_fr1 = Label(fr1, text = ' Telefone:', font= 'Arial 25')
 #Entry do 1 frame
-in1_fr1 = Entry(fr1, font= 'Arial 25')
-in2_fr1 = Entry(fr1, font= 'Arial 25')
-in3_fr1 = Entry(fr1, font= 'Arial 25')
-in4_fr1 = Entry(fr1, font= 'Arial 25')
+in1_fr1 = Entry(fr1, font= 'Arial 25' ,bg='blue')
+in2_fr1 = Entry(fr1, font= 'Arial 25',bg='blue')
+in3_fr1 = Entry(fr1, font= 'Arial 25',bg='blue')
+in4_fr1 = Entry(fr1, font= 'Arial 25',bg='blue')
 #Posição dps Label:
 lb0_fr1.grid (row=0, column=0,sticky=NSEW)
 lb1_fr1.grid (row=1, column=0,sticky=W)
@@ -34,12 +31,12 @@ in2_fr1.grid(row=2,column=1,sticky=NSEW)
 in3_fr1.grid(row=3,column=1,sticky=NSEW)
 in4_fr1.grid(row=4,column=1,sticky=NSEW)
 #Label do 2 frame
-lb0_fr2 = Label(fr2, text = '  Endereço:', font= 'Arial 25')
-lb1_fr2 = Label(fr2, text = '  Rua:', font= 'Arial 25')
-lb2_fr2 = Label(fr2, text = '  Bairro', font= 'Arial 25')
-lb3_fr2 = Label(fr2, text = '  Cidade:', font= 'Arial 25')
-lb4_fr2 = Label(fr2, text = '  N°:', font= 'Arial 25')
-lb5_fr2 = Label(fr2, text=  '  UF:', font='Arial 25')
+lb0_fr2 = Label(fr2, text = '  Endereço:', font= 'Arial 25', bg='blue')
+lb1_fr2 = Label(fr2, text = '  Rua:', font= 'Arial 25',bg='blue' )
+lb2_fr2 = Label(fr2, text = '  Bairro', font= 'Arial 25', bg='blue')
+lb3_fr2 = Label(fr2, text = '  Cidade:', font= 'Arial 25' ,bg='blue')
+lb4_fr2 = Label(fr2, text = '  N°:', font= 'Arial 25',bg='blue')
+lb5_fr2 = Label(fr2, text=  '  UF:', font='Arial 25',bg='blue')
 #Entry 2 frame
 in1_fr2 = Entry(fr2, font= 'Arial 25')
 in2_fr2 = Entry(fr2, font= 'Arial 25')
